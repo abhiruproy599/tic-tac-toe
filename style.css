@@ -28,21 +28,24 @@ body {
 }
 
 .game {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: auto;
     width: 100%;
-    max-width: 400px;
+    gap: 10px;
+    max-width: 300px;
     margin: auto;
 }
 
 .box {
     margin: 10px;
     height: 90px;
-    width: 90px;
-    font-size: 72px;
+    aspect-ratio: 1;
+    width: 75%;
+    font-size: 6vmin;
     border: 2px solid rebeccapurple;
     border-radius: 15px;
     box-shadow: 0 0 15px #023047;
@@ -94,9 +97,10 @@ body {
 
 @media (max-width: 600px) {
     .box {
-        width: 70px;
+        width: 28vw;
         height: 70px;
-        font-size: 48px;
+        font-size: 8vw;
+        aspect-ratio: 1;
     }
 
     #message {
@@ -105,8 +109,8 @@ body {
 
     #reset,
     #new_btn {
-        width: 120px;
-        height: 45px;
+        width: 40vw;
+        height: 10vw;
         font-size: small;
     }
 }
